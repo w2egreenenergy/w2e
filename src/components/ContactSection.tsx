@@ -9,13 +9,12 @@ import {
   Phone,
   Building2,
   FileSpreadsheet,
-  Globe,
-  Share2,
   ArrowRight,
   ShieldCheck,
   CheckCircle2,
   Lock,
-  RefreshCw
+  RefreshCw,
+  MapPin
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -56,11 +55,11 @@ export default function ContactSection() {
   ];
 
   return (
-    <section id="contact" className="relative py-24 bg-[#0a0c0a] border-t border-white/5 overflow-hidden">
+    <section id="contact" className="relative py-24 bg-gradient-to-b from-[#121817] to-[#0B0F0C] border-t border-white/5 overflow-hidden">
       
       {/* Decorative vertical energy laser grids */}
-      <div className="absolute top-0 bottom-0 left-10 w-[1px] bg-w2e-green/5 hidden lg:block" />
-      <div className="absolute top-0 bottom-0 right-10 w-[1px] bg-w2e-lime/5 hidden lg:block" />
+      <div className="absolute top-0 bottom-0 left-10 w-[1px] bg-[#00C853]/5 hidden lg:block" />
+      <div className="absolute top-0 bottom-0 right-10 w-[1px] bg-[#3DDC84]/5 hidden lg:block" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 font-sans">
         
@@ -68,7 +67,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* LEFT: Inquiry form (7 Cols) */}
-          <div className="lg:col-span-7 bg-white/5 backdrop-blur-md border border-white/10 p-6 sm:p-10 rounded-2xl shadow-xl shadow-black relative glow-green overflow-hidden">
+          <div className="lg:col-span-7 ecotech-glass border border-[#00C853]/25 p-6 sm:p-10 rounded-3xl shadow-2xl relative glow-green overflow-hidden">
             
             <AnimatePresence mode="wait">
               {!submitSuccess ? (
@@ -79,8 +78,8 @@ export default function ContactSection() {
                   onSubmit={handleSubmit}
                   className="space-y-6"
                 >
-                  <div className="border-b border-white/5 pb-4 mb-6">
-                    <span className="text-[10px] font-mono tracking-widest text-[#8CC63F] uppercase block mb-1">
+                  <div className="border-b border-white/15 pb-4 mb-6">
+                    <span className="text-[10px] font-mono tracking-widest text-[#3DDC84] uppercase block mb-1 font-bold">
                       PROJECT FEASIBILITY CHANNEL
                     </span>
                     <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-white">
@@ -100,7 +99,7 @@ export default function ContactSection() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Ramesh Verma"
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       />
                     </div>
 
@@ -114,7 +113,7 @@ export default function ContactSection() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="e.g. ramesh@millsco.com"
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       />
                     </div>
                   </div>
@@ -131,7 +130,7 @@ export default function ContactSection() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       />
                     </div>
 
@@ -142,10 +141,10 @@ export default function ContactSection() {
                       <select
                         value={formData.industryType}
                         onChange={(e) => setFormData({ ...formData, industryType: e.target.value })}
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       >
                         {industries.map((ind) => (
-                          <option key={ind} value={ind} className="bg-[#0a0c0a] text-white">
+                          <option key={ind} value={ind} className="bg-[#0B0F0C] text-white">
                             {ind}
                           </option>
                         ))}
@@ -162,13 +161,13 @@ export default function ContactSection() {
                       <select
                         value={formData.wasteQuantity}
                         onChange={(e) => setFormData({ ...formData, wasteQuantity: e.target.value })}
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       >
-                        <option value="10-25 Tons/Day" className="bg-[#0a0c0a]">10 - 25 Tons/Day</option>
-                        <option value="25-50 Tons/Day" className="bg-[#0a0c0a]">25 - 50 Tons/Day</option>
-                        <option value="50-100 Tons/Day" className="bg-[#0a0c0a]">50 - 100 Tons/Day</option>
-                        <option value="100-250 Tons/Day" className="bg-[#0a0c0a]">100 - 250 Tons/Day</option>
-                        <option value="250+ Tons/Day" className="bg-[#0a0c0a]">250+ Tons/Day</option>
+                        <option value="10-25 Tons/Day" className="bg-[#0B0F0C]">10 - 25 Tons/Day</option>
+                        <option value="25-50 Tons/Day" className="bg-[#0B0F0C]">25 - 50 Tons/Day</option>
+                        <option value="50-100 Tons/Day" className="bg-[#0B0F0C]">50 - 100 Tons/Day</option>
+                        <option value="100-250 Tons/Day" className="bg-[#0B0F0C]">100 - 250 Tons/Day</option>
+                        <option value="250+ Tons/Day" className="bg-[#0B0F0C]">250+ Tons/Day</option>
                       </select>
                     </div>
 
@@ -179,12 +178,12 @@ export default function ContactSection() {
                       <select
                         value={formData.interest}
                         onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       >
-                        <option value="Bio-CNG Plants Setup" className="bg-[#0a0c0a]">Bio-CNG Plants</option>
-                        <option value="Industrial Biogas System" className="bg-[#0a0c0a]">Industrial Biogas</option>
-                        <option value="Gas Purification Columns" className="bg-[#0a0c0a]">Advanced Purification</option>
-                        <option value="EPC Master Contracting" className="bg-[#0a0c0a]">EPC Turnkey Project</option>
+                        <option value="Bio-CNG Plants Setup" className="bg-[#0B0F0C]">Bio-CNG Plants</option>
+                        <option value="Industrial Biogas System" className="bg-[#0B0F0C]">Industrial Biogas</option>
+                        <option value="Gas Purification Columns" className="bg-[#0B0F0C]">Advanced Purification</option>
+                        <option value="EPC Master Contracting" className="bg-[#0B0F0C]">EPC Turnkey Project</option>
                       </select>
                     </div>
 
@@ -195,11 +194,11 @@ export default function ContactSection() {
                       <select
                         value={formData.plantCapacity}
                         onChange={(e) => setFormData({ ...formData, plantCapacity: e.target.value })}
-                        className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0a0c0a] transition-all"
+                        className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white focus:outline-hidden focus:bg-[#0B0F0C] transition-all"
                       >
-                        <option value="High Yield Infrastructure" className="bg-[#0a0c0a]">High Yield (Commercial)</option>
-                        <option value="Medium Regional Skid" className="bg-[#0a0c0a]">Medium Regional Skid</option>
-                        <option value="Small Agricultural Mill Assembly" className="bg-[#0a0c0a]">Small Agricultural Mill</option>
+                        <option value="High Yield Infrastructure" className="bg-[#0B0F0C]">High Yield (Commercial)</option>
+                        <option value="Medium Regional Skid" className="bg-[#0B0F0C]">Medium Regional Skid</option>
+                        <option value="Small Agricultural Mill Assembly" className="bg-[#0B0F0C]">Small Agricultural Mill</option>
                       </select>
                     </div>
                   </div>
@@ -214,7 +213,7 @@ export default function ContactSection() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="e.g. Kolhapur sugarcane mill, 4.5 acres ready clay land, looking to tap local distillery effluent..."
-                      className="w-full bg-white/[0.02] border border-white/10 hover:border-[#8CC63F]/50 focus:border-[#8CC63F] rounded-lg px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0a0c0a] transition-all resize-none"
+                      className="w-full bg-[#0B0F0C]/80 border border-[#00C853]/20 hover:border-[#3DDC84]/50 focus:border-[#3DDC84] rounded-xl px-4 py-3 text-xs text-white placeholder-gray-600 focus:outline-hidden focus:bg-[#0B0F0C] transition-all resize-none"
                     />
                   </div>
 
@@ -228,17 +227,17 @@ export default function ContactSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 py-4 bg-linear-to-r from-w2e-green to-w2e-lime text-xs font-bold font-mono tracking-widest text-white rounded-lg hover:brightness-110 disabled:brightness-75 transition-all cursor-pointer"
+                    className="w-full flex items-center justify-center gap-2 py-4 bg-gradient-to-r from-[#00C853] to-[#3DDC84] hover:from-[#3DDC84] hover:to-[#00C853] text-[#0B0F0C] text-xs font-bold font-mono tracking-widest uppercase rounded-xl hover:scale-[1.01] active:scale-[0.99] disabled:brightness-75 transition-all shadow-[0_0_20px_rgba(0,200,83,0.3)] cursor-pointer"
                   >
                     {isSubmitting ? (
                       <>
-                        <RefreshCw className="w-4 h-4 animate-spin text-white" />
+                        <RefreshCw className="w-4 h-4 animate-spin text-[#0B0F0C]" />
                         RUNNING FEASIBILITY MONTE CARLO SIMULATOR...
                       </>
                     ) : (
                       <>
-                        SUBMIT INQUIRY & ANALYZE PAYBACK pay
-                        <ArrowRight className="w-4 h-4 text-white" />
+                        SUBMIT INQUIRY & ANALYZE PAYBACK
+                        <ArrowRight className="w-4 h-4 text-[#0B0F0C]" />
                       </>
                     )}
                   </button>
@@ -279,7 +278,7 @@ export default function ContactSection() {
                     </div>
                     <div className="flex justify-between border-b border-white/5 pb-1 text-gray-500">
                       <span>BLUEPRINT_INDEX:</span>
-                      <span className="text-w2e-lime font-bold">W2E-FEAS-P944A</span>
+                      <span className="text-[#3DDC84] font-bold">W2E-FEAS-P944A</span>
                     </div>
                     <div className="flex justify-between text-gray-500">
                       <span>REGISTRATION_STATUS:</span>
@@ -315,79 +314,89 @@ export default function ContactSection() {
           {/* RIGHT: Corporate HQ contact details (5 Cols) */}
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-28">
             <div className="space-y-4">
-              <span className="text-xs font-mono text-[#8CC63F] tracking-widest uppercase block">
-                GLOBAL OFFICES & OUTPOSTS
+              <span className="text-xs font-mono text-[#3DDC84] tracking-widest uppercase block font-bold">
+                CENTRAL OPERATIONS & HQ
               </span>
               <h3 className="text-2xl sm:text-3xl font-heading font-extrabold text-white">
                 W2E Bioenergy Headquarters
               </h3>
               <p className="text-xs sm:text-sm text-gray-400 leading-relaxed font-light">
-                Connect directly with our central offices in India's technology and industrial energy hubs for direct corporate financing and sovereign project partnerships.
+                Connect directly with our central operations and engineering leadership team in Maharashtra to coordinate feasibility studies, plant design, and project deployment.
               </p>
             </div>
 
             {/* Offices list */}
             <div className="space-y-6 font-mono text-xs">
               
-              {/* Office 1 */}
-              <div className="bg-white/5 backdrop-blur-xs border border-white/10 hover:border-[#8CC63F]/40 p-5 rounded-xl transition-all space-y-3">
-                <div className="flex items-center gap-2 text-white font-bold">
-                  <Building2 className="w-4 h-4 text-[#8CC63F]" />
-                  <span>Delhi NCR Corporate Office</span>
+              {/* Primary HQ Card */}
+              <div className="ecotech-glass border border-[#00C853]/20 hover:border-[#3DDC84]/40 hover:shadow-[0_0_15px_rgba(0,200,83,0.08)] p-6 rounded-2xl transition-all duration-300 space-y-4">
+                <div className="flex items-center gap-2 text-white font-bold text-sm">
+                  <Building2 className="w-5 h-5 text-[#3DDC84]" />
+                  <span>Maharashtra Main Operations & Plant HQ</span>
                 </div>
-                <p className="text-gray-400 leading-relaxed text-[11px]">
-                  Tower B, Renewable Energy Center, Core 4, Sector 62, Noida, NCR Delhi, 201301, India.
-                </p>
-                <div className="flex flex-wrap gap-4 text-[10px] text-gray-500 border-t border-white/5 pt-3">
-                  <div className="flex items-center gap-1">
-                    <Phone className="w-3.5 h-3.5 text-w2e-lime" />
-                    <span>+91 11 4102-8844</span>
+                
+                <div className="space-y-3.5">
+                  <div className="flex items-start gap-2.5 text-gray-300">
+                    <MapPin className="w-4 h-4 text-[#30db76] shrink-0 mt-0.5" />
+                    <p className="leading-relaxed text-[11px]">
+                      A/P - Chinawal, Tal - Raver, Dist - Jalgaon, Maharashtra - 425505
+                    </p>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Mail className="w-3.5 h-3.5 text-w2e-lime" />
-                    <span>hcr.delhi@w2ebio.com</span>
+                  
+                  <div className="flex items-center gap-2.5 text-gray-300 border-t border-white/5 pt-3">
+                    <Phone className="w-4 h-4 text-[#30db76] shrink-0" />
+                    <a 
+                      href="tel:+919420672283" 
+                      className="hover:text-[#3DDC84] transition-colors font-bold text-[11px] hover:underline"
+                    >
+                      +91 9420672283
+                    </a>
+                  </div>
+                </div>
+
+                {/* Email Channels */}
+                <div className="border-t border-white/5 pt-3.5 space-y-3">
+                  <div className="flex items-center gap-2.5 text-gray-400">
+                    <Mail className="w-4 h-4 text-[#3DDC84] shrink-0" />
+                    <div>
+                      <span className="text-[9px] text-gray-500 block leading-none font-bold uppercase mb-0.5">Executive Desk</span>
+                      <a 
+                        href="mailto:ceo@w2egreenenergy.com" 
+                        className="hover:text-[#3DDC84] transition-colors hover:underline text-[11px] text-gray-300 font-semibold"
+                      >
+                        ceo@w2egreenenergy.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 text-gray-400">
+                    <Mail className="w-4 h-4 text-[#3DDC84] shrink-0" />
+                    <div>
+                      <span className="text-[9px] text-gray-500 block leading-none font-bold uppercase mb-0.5">Projects & Director</span>
+                      <a 
+                        href="mailto:lalit@w2egreenenergy.com" 
+                        className="hover:text-[#3DDC84] transition-colors hover:underline text-[11px] text-gray-300 font-semibold"
+                      >
+                        lalit@w2egreenenergy.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 text-gray-400">
+                    <Mail className="w-4 h-4 text-[#3DDC84] shrink-0" />
+                    <div>
+                      <span className="text-[9px] text-gray-500 block leading-none font-bold uppercase mb-0.5">Technical Support</span>
+                      <a 
+                        href="mailto:support@w2egreenenergy.com" 
+                        className="hover:text-[#3DDC84] transition-colors hover:underline text-[11px] text-gray-300 font-semibold"
+                      >
+                        support@w2egreenenergy.com
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Office 2 */}
-              <div className="bg-white/5 backdrop-blur-xs border border-white/10 hover:border-[#8CC63F]/40 p-5 rounded-xl transition-all space-y-3">
-                <div className="flex items-center gap-2 text-white font-bold">
-                  <Building2 className="w-4 h-4 text-[#8CC63F]" />
-                  <span>Gujarat Technical & EPC Complex</span>
-                </div>
-                <p className="text-gray-400 leading-relaxed text-[11px]">
-                  Level 8, Bio-Grid Plaza, SG Highway, Ahmedabad, Gujarat, 380054, India.
-                </p>
-                <div className="flex flex-wrap gap-4 text-[10px] text-gray-500 border-t border-white/5 pt-3">
-                  <div className="flex items-center gap-1">
-                    <Phone className="w-3.5 h-3.5 text-w2e-lime" />
-                    <span>+91 79 6608-1122</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Mail className="w-3.5 h-3.5 text-w2e-lime" />
-                    <span>epc.gujarat@w2ebio.com</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Social handles */}
-            <div className="border-t border-white/5 pt-6">
-              <span className="block text-[9px] font-mono text-gray-500 uppercase tracking-widest mb-3">
-                ENCRYPTED SECURE DIRECT CHANNELS
-              </span>
-              <div className="flex items-center gap-3 text-xs font-mono">
-                <a href="#about" className="flex items-center gap-1 px-3 py-1.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-md transition-colors">
-                  <Globe className="w-3.5 h-3.5 text-w2e-lime" />
-                  <span>w2ebio.energy</span>
-                </a>
-                <a href="#solutions" className="flex items-center gap-1 px-3 py-1.5 bg-white/5 hover:bg-white/10 text-gray-300 rounded-md transition-colors">
-                  <Share2 className="w-3.5 h-3.5 text-w2e-lime" />
-                  <span>LinkedIn Infrastructure</span>
-                </a>
-              </div>
             </div>
 
           </div>

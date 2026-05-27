@@ -54,7 +54,7 @@ export default function Navbar() {
         id="navbar"
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#0a0c0a]/90 backdrop-blur-md border-b border-w2e-green/20 py-4 shadow-lg shadow-black/30"
+            ? "bg-[#0B0F0C]/80 backdrop-blur-xl border-b border-[#00C853]/15 py-4 shadow-[0_10px_35px_rgba(0,0,0,0.6)]"
             : "bg-transparent py-6"
         }`}
       >
@@ -93,17 +93,17 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-4">
               <button
                 onClick={() => handleNavClick("#calculator")}
-                className="flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium tracking-wider text-w2e-lime hover:text-white border border-w2e-lime/30 hover:border-w2e-lime hover:bg-[#1F6B1B]/20 rounded-full transition-all duration-200 cursor-pointer"
+                className="flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium tracking-wider text-[#3DDC84] hover:text-white border border-[#3DDC84]/30 hover:border-[#00C853] hover:bg-[#00C853]/15 rounded-full shadow-[0_0_12px_rgba(0,200,83,0.05)] hover:shadow-[0_0_20px_rgba(0,200,83,0.2)] transition-all duration-300 cursor-pointer"
               >
                 <BarChart3 className="w-3.5 h-3.5" />
                 DASHBOARD ROI
               </button>
               <button
                 onClick={() => handleNavClick("#contact")}
-                className="flex items-center gap-1 px-6 py-2.5 bg-[#1F6B1B] hover:bg-[#2a8a25] text-white text-xs font-bold uppercase tracking-wider rounded-full border border-[#8CC63F]/50 shadow-[0_0_20px_rgba(31,107,27,0.3)] duration-200 transition-all cursor-pointer"
+                className="flex items-center gap-1 px-6 py-2.5 bg-gradient-to-r from-[#00C853] to-[#3DDC84] hover:from-[#3DDC84] hover:to-[#00C853] text-black text-xs font-bold uppercase tracking-wider rounded-full shadow-[0_0_20px_rgba(0,200,83,0.3)] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] hover:scale-[1.04] transition-all duration-300 cursor-pointer"
               >
                 CONTACT US
-                <ChevronRight className="w-3.5 h-3.5 text-[#8CC63F]" />
+                <ChevronRight className="w-3.5 h-3.5 text-black" />
               </button>
             </div>
 
@@ -153,14 +153,14 @@ export default function Navbar() {
               <div className="pt-4 flex flex-col gap-3">
                 <button
                   onClick={() => handleNavClick("#calculator")}
-                  className="w-full flex items-center justify-center gap-2 py-3 text-sm font-mono font-medium text-w2e-lime border border-w2e-lime/30 rounded-md bg-w2e-lime/5"
+                  className="w-full flex items-center justify-center gap-2 py-3 text-sm font-mono font-medium text-[#3DDC84] border border-[#3DDC84]/30 rounded-md bg-[#3DDC84]/5"
                 >
                   <BarChart3 className="w-4 h-4" />
                   CALCULATE PLANT ROI
                 </button>
                 <button
                   onClick={() => handleNavClick("#contact")}
-                  className="w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-white bg-linear-to-r from-w2e-green to-w2e-lime rounded-md"
+                  className="w-full flex items-center justify-center gap-2 py-3 text-sm font-semibold text-black bg-gradient-to-r from-[#00C853] to-[#3DDC84] rounded-md shadow-[0_0_15px_rgba(0,200,83,0.25)]"
                 >
                   <Mail className="w-4 h-4" />
                   GET IN TOUCH

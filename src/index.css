@@ -6,59 +6,104 @@
   --font-heading: 'Sora', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  --color-w2e-green: #1F6B1B;
-  --color-w2e-forest: #145A32;
-  --color-w2e-lime: #8CC63F;
-  --color-w2e-dark: #111111;
-  --color-w2e-glass: rgba(18, 18, 18, 0.75);
+  /* Carbon-clean "Dark Eco-Tech" Custom Color Palette */
+  --color-w2e-green: #00C853; /* Neon Eco Green */
+  --color-w2e-forest: #121817; /* Graphite */
+  --color-w2e-lime: #3DDC84; /* Bio Green */
+  --color-w2e-olive: #7A8F3B; /* Olive Green */
+  --color-w2e-brown: #8B5E34; /* Organic Brown */
+  --color-w2e-cyan: #00E5FF; /* Electric Cyan Highlight */
+  --color-w2e-dark: #121817; /* Graphite Background */
+  --color-w2e-black: #0B0F0C; /* Deep Charcoal Black */
+
+  --color-w2e-glass: rgba(18, 24, 23, 0.65);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
-    background-color: #0a0c0a;
+    background-color: #0B0F0C;
     color: #f3f4f6;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    letter-spacing: -0.025em;
   }
 }
 
 /* Custom cyber-glow shadows and dynamic gradient overlays */
 .glow-green {
-  box-shadow: 0 0 30px rgba(31, 107, 27, 0.25);
+  box-shadow: 0 0 35px rgba(0, 200, 83, 0.25);
 }
 
 .glow-lime {
-  box-shadow: 0 0 35px rgba(140, 198, 63, 0.15);
+  box-shadow: 0 0 45px rgba(61, 220, 132, 0.15);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.25);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 40%, #8CC63F 100%);
+  background: linear-gradient(135deg, #ffffff 45%, #3DDC84 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .green-gradient-text {
-  background: linear-gradient(135deg, #8CC63F 0%, #1F6B1B 100%);
+  background: linear-gradient(135deg, #00C853 0%, #3DDC84 50%, #00E5FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Premium "Dark Eco-Tech" Glassmorphism Surfaces */
+.ecotech-glass {
+  background: rgba(18, 24, 23, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(61, 220, 132, 0.12);
+}
+
+.ecotech-glass-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ecotech-glass-hover:hover {
+  background: rgba(18, 24, 23, 0.8);
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 12px 40px rgba(0, 200, 83, 0.15), inset 0 0 20px rgba(0, 229, 255, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Kinetic Grid Background Slider */
+.kinetic-grid {
+  background-image: 
+    linear-gradient(rgba(0, 200, 83, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 83, 0.015) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-slide 40s linear infinite;
+}
+
+@keyframes grid-slide {
+  from { background-position: 0 0; }
+  to { background-position: 100px 100px; }
+}
+
 /* Hide standard scrollbars but allow scrolling */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0c0a;
+  background: #0B0F0C;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1F6B1B;
-  border-radius: 4px;
+  background: #121817;
+  border: 1px solid rgba(0, 200, 83, 0.2);
+  border-radius: 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #8CC63F;
+  background: #3DDC84;
 }
 

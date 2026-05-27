@@ -35,17 +35,17 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="relative py-24 bg-[#0a0c0a] overflow-hidden">
+    <section id="about" className="relative py-24 bg-gradient-to-b from-[#0B0F0C] to-[#121817] overflow-hidden">
       {/* Decorative Grid Line Highlights */}
-      <div className="absolute top-1/4 left-0 right-0 h-[1px] bg-linear-to-r from-transparent via-w2e-green/20 to-transparent" />
-      <div className="absolute bottom-1/4 left-0 right-0 h-[1px] bg-linear-to-r from-transparent via-w2e-lime/10 to-transparent" />
+      <div className="absolute top-1/4 left-0 right-0 h-[1px] bg-linear-to-r from-transparent via-[#00C853]/15 to-transparent" />
+      <div className="absolute bottom-1/4 left-0 right-0 h-[1px] bg-linear-to-r from-transparent via-[#3DDC84]/10 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Visual Bento Column Left (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-xs font-mono text-w2e-lime tracking-widest uppercase block">
+            <span className="text-xs font-mono text-[#3DDC84] tracking-widest uppercase block font-bold">
               CORPORATE ECOSYSTEM PROFILE
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
@@ -59,8 +59,8 @@ export default function About() {
             </p>
 
             <div className="pt-4 border-t border-white/5 space-y-4">
-              <div className="flex items-start gap-3 bg-white/[0.02] border border-w2e-green/10 p-4 rounded-lg">
-                <ShieldAlert className="w-5 h-5 text-w2e-lime shrink-0 mt-0.5" />
+              <div className="flex items-start gap-3 bg-[#121817]/50 border border-[#00C853]/15 p-4.5 rounded-xl hover:border-[#3DDC84]/35 transition-colors duration-300 shadow-[0_0_15px_rgba(0,200,83,0.02)]">
+                <ShieldAlert className="w-5 h-5 text-[#3DDC84] shrink-0 mt-0.5 animate-pulse" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">Our Master Carbon Mandate:</h4>
                   <p className="text-xs text-gray-400 mt-1 leading-relaxed">
@@ -78,13 +78,13 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-white/[0.01] hover:bg-white/[0.03] border border-white/5 hover:border-w2e-green/35 p-6 rounded-xl transition-all duration-300 relative group"
+                  className="ecotech-glass ecotech-glass-hover p-6 rounded-2xl relative group"
                 >
                   {/* Subtle index line indicator */}
-                  <div className="absolute top-0 left-6 right-6 h-[2px] bg-linear-to-r from-w2e-green to-w2e-lime scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                  <div className="absolute top-0 left-6 right-6 h-[2.5px] bg-gradient-to-r from-[#00C853] via-[#3DDC84] to-[#00E5FF] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-mono tracking-wider text-w2e-lime uppercase bg-w2e-green/10 px-2 py-0.5 rounded-full border border-w2e-green/20">
+                    <span className="text-[10px] font-mono tracking-wider text-[#3DDC84] uppercase bg-[#00C853]/10 px-2 py-0.5 rounded-full border border-[#00C853]/25 shadow-[0_0_8px_rgba(0,200,83,0.1)]">
                       {pillar.tag}
                     </span>
                     <span className="text-xs font-mono text-gray-500 font-medium">
@@ -92,11 +92,11 @@ export default function About() {
                     </span>
                   </div>
 
-                  <div className="p-3 bg-w2e-green/5 rounded-lg border border-w2e-green/20 text-white w-fit mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="w-5 h-5 text-[#8CC63F]" />
+                  <div className="p-3 bg-[#00C853]/10 rounded-lg border border-[#00C853]/20 text-white w-fit mb-4 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_12px_rgba(0,200,83,0.15)]">
+                    <Icon className="w-5 h-5 text-[#3DDC84]" />
                   </div>
 
-                  <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-w2e-lime transition-colors">
+                  <h3 className="font-heading font-bold text-lg text-white mb-2 group-hover:text-[#3DDC84] transition-colors">
                     {pillar.title}
                   </h3>
                   <p className="text-xs text-gray-400 leading-relaxed">

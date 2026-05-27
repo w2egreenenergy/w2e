@@ -38,40 +38,53 @@ export default function Hero() {
           className="w-full h-full object-cover scale-105 animate-[subtle-zoom_20s_infinite_alternate]"
           referrerPolicy="no-referrer"
         />
-        {/* Deep dark green radial tint overlay */}
-        <div className="absolute inset-0 bg-radial from-transparent via-[#0a0c0a]/75 to-[#050705] mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0c0a] via-[#0a0c0a]/60 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0c0a] via-transparent to-[#0a0c0a]/40" />
+        {/* Deep dark green radial tint overlay tailored to Dark Eco-Tech Charcoal Black */}
+        <div className="absolute inset-0 bg-radial from-transparent via-[#0B0F0C]/75 to-[#0B0F0C] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F0C] via-[#0B0F0C]/65 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F0C] via-transparent to-[#0B0F0C]/55" />
       </div>
 
-      {/* Floating Sparkles Canvas effect (Subtle Animated Particles) */}
+      {/* Floating Sparkles Canvas effect (Subtle Animated Particles) with Motion library */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
-        {[...Array(12)].map((_, i) => (
-          <div
+        {[...Array(15)].map((_, i) => (
+          <motion.div
             key={i}
-            className="absolute rounded-full bg-w2e-lime/40 blur-[2px]"
+            className="absolute rounded-full bg-gradient-to-r from-[#3DDC84]/30 to-[#00E5FF]/20 blur-[1px]"
+            animate={{
+              y: [0, -140, 0],
+              x: [0, Math.sin(i) * 30, 0],
+              opacity: [0, 0.7, 0]
+            }}
+            transition={{
+              duration: 8 + (i % 5) * 3,
+              repeat: Infinity,
+              delay: (i % 4) * 2,
+              ease: "easeInOut"
+            }}
             style={{
-              width: `${Math.random() * 4 + 4}px`,
-              height: `${Math.random() * 4 + 4}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animation: `float ${Math.random() * 10 + 10}s infinite ease-in-out`,
-              animationDelay: `${Math.random() * 5}s`,
+              width: `${(i % 3) * 2 + 5}px`,
+              height: `${(i % 3) * 2 + 5}px`,
+              top: `${20 + (i * 5) % 80}%`,
+              left: `${10 + (i * 6) % 80}%`,
+              boxShadow: "0 0 10px rgba(61, 220, 132, 0.3)",
             }}
           />
         ))}
       </div>
 
       {/* Grid Overlay for Industrial Modern Appearance */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,200,83,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,200,83,0.02)_1px,transparent_1px)] bg-[size:45px_45px] pointer-events-none z-10" />
 
       {/* Container Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20 w-full">
         <div className="max-w-4xl text-left">
           {/* Top Tagline Badges */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#1F6B1B]/20 border border-[#1F6B1B]/40 rounded-full mb-6 max-w-fit">
-            <span className="w-2 h-2 rounded-full bg-[#8CC63F] animate-pulse"></span>
-            <span className="text-xs font-mono font-medium tracking-wider text-[#8CC63F] uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#00C853]/10 border border-[#3DDC84]/30 rounded-full mb-6 max-w-fit shadow-[0_0_15px_rgba(0,200,83,0.1)]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00C853] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3DDC84]"></span>
+            </span>
+            <span className="text-[10px] sm:text-xs font-mono font-bold tracking-wider text-[#3DDC84] uppercase">
               Next-Gen Bio-CNG Technology &bull; SATAT Approved
             </span>
           </div>
@@ -79,13 +92,13 @@ export default function Hero() {
           {/* Heading with Dual-tagline focus (staggered entries) */}
           <h1 className="font-heading font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white mb-6 leading-[1.1]">
             Transforming Waste <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#8CC63F] to-[#1F6B1B] font-black">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-[#3DDC84] to-[#00C853] font-black drop-shadow-[0_0_30px_rgba(0,200,83,0.15)]">
               Into Clean Energy
             </span>
           </h1>
 
           {/* Slogan Toggle indicator */}
-          <div className="h-1 w-24 bg-linear-to-r from-w2e-green to-w2e-lime mb-8 rounded-full" />
+          <div className="h-1.5 w-28 bg-gradient-to-r from-[#00C853] via-[#3DDC84] to-[#00E5FF] mb-8 rounded-full shadow-[0_0_12px_rgba(0,200,83,0.4)]" />
 
           {/* Subheading */}
           <p className="text-base sm:text-xl text-gray-300 max-w-2xl leading-relaxed font-light mb-10">
@@ -96,7 +109,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={() => handleScroll("#solutions")}
-              className="flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-bold tracking-wider hover:bg-neutral-100 rounded-lg scale-100 hover:scale-[1.03] active:scale-95 text-sm group transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-[#00C853] to-[#3DDC84] text-black font-extrabold tracking-wider hover:from-[#3DDC84] hover:to-[#00C853] rounded-lg shadow-[0_0_20px_rgba(0,200,83,0.3)] hover:shadow-[0_0_30px_rgba(0,229,255,0.45)] hover:scale-[1.03] active:scale-95 text-sm group transition-all duration-300 cursor-pointer"
             >
               <Flame className="w-4 h-4 text-black group-hover:rotate-12 transition-transform duration-300" />
               EXPLORE SOLUTIONS
@@ -104,15 +117,15 @@ export default function Hero() {
 
             <button
               onClick={() => handleScroll("#calculator")}
-              className="flex items-center justify-center gap-2 px-8 py-4 bg-transparent border border-white/20 text-white font-bold tracking-wider hover:bg-white/5 hover:border-w2e-lime/50 active:scale-95 text-sm rounded-lg transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center gap-2 px-8 py-4 bg-[#121817]/60 border border-white/10 text-white font-bold tracking-wider hover:bg-white/5 hover:border-[#3DDC84]/50 hover:shadow-[0_0_20px_rgba(61,220,132,0.15)] active:scale-95 text-sm rounded-lg transition-all duration-300 cursor-pointer"
             >
-              <Calculator className="w-4 h-4 text-[#8CC63F]" />
+              <Calculator className="w-4 h-4 text-[#3DDC84]" />
               PLANT ROI CALCULATOR
             </button>
 
             <button
               onClick={() => handleScroll("#contact")}
-              className="flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold tracking-wider text-gray-300 hover:text-[#8CC63F] hover:bg-[#1F6B1B]/10 rounded-lg transition-all duration-300 cursor-pointer"
+              className="flex items-center justify-center gap-2 px-8 py-4 text-sm font-semibold tracking-wider text-gray-300 hover:text-[#3DDC84] hover:bg-[#00C853]/10 rounded-lg transition-all duration-300 cursor-pointer"
             >
               Consult an Engineer &rarr;
             </button>
@@ -121,15 +134,15 @@ export default function Hero() {
           {/* Trust points footer */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-16 mt-4 border-t border-white/5">
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-w2e-lime shrink-0" />
+              <ShieldCheck className="w-5 h-5 text-[#3DDC84] shrink-0" />
               <span className="text-xs font-mono text-gray-400">SATAT Qualified Vendor</span>
             </div>
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-w2e-lime shrink-0" />
+              <ShieldCheck className="w-5 h-5 text-[#3DDC84] shrink-0" />
               <span className="text-xs font-mono text-gray-400">Zero Methane Slippage</span>
             </div>
             <div className="hidden md:flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-w2e-lime shrink-0" />
+              <ShieldCheck className="w-5 h-5 text-[#3DDC84] shrink-0" />
               <span className="text-xs font-mono text-gray-400">ISO 9001, 14001, 45001 Specs</span>
             </div>
           </div>
@@ -140,9 +153,9 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:block">
         <button
           onClick={() => handleScroll("#about")}
-          className="p-2 border border-white/10 rounded-full hover:border-w2e-lime/50 transition-colors"
+          className="p-2 border border-white/10 rounded-full hover:border-[#3DDC84]/50 transition-colors"
         >
-          <div className="w-1.5 h-3 bg-w2e-lime rounded-full animate-bounce" />
+          <div className="w-1.5 h-3 bg-[#3DDC84] rounded-full animate-bounce" />
         </button>
       </div>
 

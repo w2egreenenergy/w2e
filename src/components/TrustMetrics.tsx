@@ -46,9 +46,9 @@ export default function TrustMetrics() {
       suffix: " TONS",
       prefix: "",
       icon: Recycle,
-      color: "text-w2e-lime",
-      bgBorder: "border-w2e-lime/10",
-      glowBg: "rgba(140, 198, 63, 0.05)",
+      color: "text-[#3DDC84]",
+      bgBorder: "border-[#3DDC84]/15",
+      glowBg: "rgba(61, 220, 132, 0.08)",
       desc: "Total biomass digested and diverted from landfills and open stubble field burning."
     },
     {
@@ -58,9 +58,9 @@ export default function TrustMetrics() {
       suffix: " METRIC TONS",
       prefix: "",
       icon: Leaf,
-      color: "text-emerald-400",
-      bgBorder: "border-emerald-500/10",
-      glowBg: "rgba(52, 211, 153, 0.05)",
+      color: "text-[#00E5FF]",
+      bgBorder: "border-[#00E5FF]/20",
+      glowBg: "rgba(0, 229, 255, 0.08)",
       desc: "Direct reduction in methane greenhouse gases calculated via UNFCC guidelines."
     },
     {
@@ -70,9 +70,9 @@ export default function TrustMetrics() {
       suffix: " KG",
       prefix: "",
       icon: Award,
-      color: "text-w2e-green",
-      bgBorder: "border-w2e-green/20",
-      glowBg: "rgba(31, 107, 27, 0.05)",
+      color: "text-[#00C853]",
+      bgBorder: "border-[#00C853]/20",
+      glowBg: "rgba(0, 200, 83, 0.08)",
       desc: "Ultra-pure compressed biomethane supplied into transit trucks and local stations."
     },
     {
@@ -82,9 +82,9 @@ export default function TrustMetrics() {
       suffix: "% RECOVERY",
       prefix: "",
       icon: Thermometer,
-      color: "text-cyan-400",
-      bgBorder: "border-cyan-500/10",
-      glowBg: "rgba(34, 211, 238, 0.05)",
+      color: "text-[#00E5FF]",
+      bgBorder: "border-[#00E5FF]/15",
+      glowBg: "rgba(0, 229, 255, 0.08)",
       desc: "Net thermal process recovery, optimizing circular heat return networks."
     },
     {
@@ -94,9 +94,9 @@ export default function TrustMetrics() {
       suffix: " LITERS",
       prefix: "",
       icon: ShieldAlert, // Representing defense/nurture of soil
-      color: "text-amber-400",
-      bgBorder: "border-amber-500/10",
-      glowBg: "rgba(251, 191, 36, 0.05)",
+      color: "text-[#8B5E34]",
+      bgBorder: "border-[#8B5E34]/20",
+      glowBg: "rgba(139, 94, 52, 0.08)",
       desc: "Pathogen-free biological liquid slurry optimized to regenerate local topsoils."
     },
     {
@@ -106,23 +106,23 @@ export default function TrustMetrics() {
       suffix: " COMM. VESSElS",
       prefix: "",
       icon: Database,
-      color: "text-indigo-400",
-      bgBorder: "border-indigo-500/10",
-      glowBg: "rgba(129, 140, 248, 0.05)",
+      color: "text-[#3DDC84]",
+      bgBorder: "border-[#3DDC84]/15",
+      glowBg: "rgba(61, 220, 132, 0.08)",
       desc: "Large-scale continuously stirred industrial concrete tanks synchronized to main control."
     }
   ];
 
   return (
-    <section id="metrics" className="relative py-20 bg-[#0a0c0a]/80 backdrop-blur-sm border-y border-white/5 overflow-hidden">
+    <section id="metrics" className="relative py-20 bg-[#121817]/60 backdrop-blur-xl border-y border-[#00C853]/10 overflow-hidden">
       {/* Subtle Background Glows */}
-      <div className="absolute right-0 top-0 w-80 h-80 bg-w2e-green/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute left-0 bottom-0 w-80 h-80 bg-w2e-lime/5 rounded-full blur-[100px] pointer-events-none" />
-
+      <div className="absolute right-0 top-0 w-80 h-80 bg-[#00C853]/10 rounded-full blur-[100px] pointer-events-none animate-pulse" />
+      <div className="absolute left-0 bottom-0 w-80 h-80 bg-[#3DDC84]/10 rounded-full blur-[100px] pointer-events-none animate-pulse" />
+ 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
-            <span className="text-xs font-mono text-w2e-lime tracking-widest uppercase block mb-2">
+            <span className="text-xs font-mono text-[#3DDC84] tracking-widest uppercase block mb-2 font-bold">
               ESC AUDITED IMPACT LEDGER
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white">
@@ -132,12 +132,12 @@ export default function TrustMetrics() {
               Our continuous telemetry syncs fuel, solid digestate yields, and structural climate benefits directly from W2E's online circular power networks.
             </p>
           </div>
-          <div className="flex items-center gap-1.5 bg-[#1F6B1B]/20 border border-[#8CC63F]/30 px-3 py-1.5 rounded-full font-mono text-[10px] text-[#8CC63F]">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping inline-block" />
+          <div className="flex items-center gap-1.5 bg-[#00C853]/10 border border-[#3DDC84]/30 px-3 py-1.5 rounded-full font-mono text-[10px] text-[#3DDC84] shadow-[0_0_12px_rgba(0,200,83,0.15)]">
+            <span className="w-2 h-2 rounded-full bg-[#00C853] animate-ping inline-block" />
             LIVE TELEMETRY ACTIVE
           </div>
         </div>
-
+ 
         {/* Metrics Blocks */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {statsList.map((stat) => {
@@ -145,9 +145,9 @@ export default function TrustMetrics() {
             return (
               <div
                 key={stat.id}
-                className="bg-white/5 backdrop-blur-md border border-white/10 hover:border-w2e-lime/40 p-6 rounded-2xl transition-all duration-300 relative group overflow-hidden"
+                className="ecotech-glass ecotech-glass-hover p-6 rounded-2xl relative group overflow-hidden"
                 style={{
-                  boxShadow: `inset 0 0 12px ${stat.glowBg}`
+                  boxShadow: `inset 0 0 16px ${stat.glowBg}`
                 }}
               >
                 {/* Micro overlay flare */}
@@ -157,11 +157,11 @@ export default function TrustMetrics() {
                   <div className="p-2.5 bg-white/5 rounded-lg border border-white/10 text-gray-300">
                     <Icon className={`w-5 h-5 ${stat.color}`} />
                   </div>
-                  <span className="text-[10px] font-mono tracking-widest text-[#8CC63F]/50">
+                  <span className="text-[10px] font-mono tracking-widest text-[#3DDC84]/50">
                     W2E-SEC_SYS_0{stat.id === "waste" ? 1 : stat.id === "co2" ? 2 : stat.id === "fuel" ? 3 : 4}
                   </span>
                 </div>
-
+ 
                 <div className="mb-2">
                   <span className="text-xs font-mono text-gray-400 uppercase tracking-wider block mb-1">
                     {stat.label}
@@ -170,12 +170,12 @@ export default function TrustMetrics() {
                     <span className="font-mono font-black text-2xl sm:text-3xl text-white tracking-tight">
                       {stat.value}
                     </span>
-                    <span className="font-mono text-xs text-w2e-lime-400">
+                    <span className="font-mono text-xs text-[#3DDC84]">
                       {stat.suffix}
                     </span>
                   </div>
                 </div>
-
+ 
                 <p className="text-[11px] text-gray-400 border-t border-white/5 pt-3 leading-relaxed">
                   {stat.desc}
                 </p>
