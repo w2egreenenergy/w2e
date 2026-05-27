@@ -4,9 +4,7 @@
  */
 
 import { Flame, Calculator, Sparkles, ShieldCheck, HelpCircle } from "lucide-react";
-import { motion } from "motion/react";
-
-const heroImage = "/src/assets/images/hero_biogas_infrastructure_1779788974859.png";
+import heroImage from "../assets/images/hero_biogas_infrastructure_1779788974859.png";
 
 export default function Hero() {
   const handleScroll = (href: string) => {
@@ -42,34 +40,6 @@ export default function Hero() {
         <div className="absolute inset-0 bg-radial from-transparent via-[#0B0F0C]/75 to-[#0B0F0C] mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F0C] via-[#0B0F0C]/65 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B0F0C] via-transparent to-[#0B0F0C]/55" />
-      </div>
-
-      {/* Floating Sparkles Canvas effect (Subtle Animated Particles) with Motion library */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-gradient-to-r from-[#3DDC84]/30 to-[#00E5FF]/20 blur-[1px]"
-            animate={{
-              y: [0, -140, 0],
-              x: [0, Math.sin(i) * 30, 0],
-              opacity: [0, 0.7, 0]
-            }}
-            transition={{
-              duration: 8 + (i % 5) * 3,
-              repeat: Infinity,
-              delay: (i % 4) * 2,
-              ease: "easeInOut"
-            }}
-            style={{
-              width: `${(i % 3) * 2 + 5}px`,
-              height: `${(i % 3) * 2 + 5}px`,
-              top: `${20 + (i * 5) % 80}%`,
-              left: `${10 + (i * 6) % 80}%`,
-              boxShadow: "0 0 10px rgba(61, 220, 132, 0.3)",
-            }}
-          />
-        ))}
       </div>
 
       {/* Grid Overlay for Industrial Modern Appearance */}

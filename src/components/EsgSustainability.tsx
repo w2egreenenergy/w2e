@@ -84,7 +84,7 @@ export default function EsgSustainability() {
               <span className="text-xs font-mono text-gray-500 uppercase tracking-widest block">
                 UNITED NATIONS SDG TARGET COMPLIANCE ALIGNMENT
               </span>
-              <Sparkles className="w-3.5 h-3.5 text-[#3DDC84] animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-[#3DDC84]" />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

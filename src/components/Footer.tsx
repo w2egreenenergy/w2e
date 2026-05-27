@@ -296,21 +296,21 @@ export default function Footer() {
       </div>
 
       {/* Floating Premium WhatsApp Contact FAB */}
-      <div className="fixed bottom-6 right-6 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50">
         <a
           href="https://wa.me/919420672283"
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-[0_4px_24px_rgba(37,211,102,0.45)] hover:shadow-[0_4px_30px_rgba(37,211,102,0.6)] transition-all duration-300 hover:scale-[1.08] group"
+          className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:shadow-[0_4px_28px_rgba(37,211,102,0.6)] transition-all duration-300 hover:scale-[1.08] group"
           title="Direct Bio-CNG Support"
         >
-          {/* Continuous ripple rings emerging outward */}
+          {/* Continuous ripple rings emerging outward - optimized for mobile performance & size */}
           {[0, 1, 2].map((i) => (
             <motion.span
               key={i}
-              className="absolute inset-0 rounded-full bg-[#25D366]/40 -z-10 pointer-events-none"
+              className="absolute inset-0 rounded-full bg-[#25D366]/30 -z-10 pointer-events-none hidden sm:block"
               initial={{ scale: 0.9, opacity: 0.9 }}
-              animate={{ scale: 2.3, opacity: 0 }}
+              animate={{ scale: 2.1, opacity: 0 }}
               transition={{
                 duration: 2.4,
                 repeat: Infinity,
@@ -323,7 +323,7 @@ export default function Footer() {
           {/* WhatsApp Logo Icon with hover tilt */}
           <svg
             viewBox="0 0 24 24"
-            className="w-7 h-7 fill-white transform group-hover:rotate-12 transition-transform duration-300 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]"
+            className="w-6 h-6 sm:w-7 sm:h-7 fill-white transform group-hover:rotate-12 transition-transform duration-300 filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.15)]"
           >
             <path d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.18-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.192 8.192 0 0 1-1.26-4.38c0-4.51 3.67-8.18 8.18-8.18 2.18 0 4.24.85 5.78 2.39 1.54 1.54 2.4 3.6 2.4 5.79 0 4.51-3.67 8.19-8.18 8.19zm4.49-6.13c-.25-.13-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.66.83-.81.99-.15.17-.31.19-.56.06-.25-.13-1.07-.39-2.03-1.25-.74-.66-1.24-1.48-1.39-1.73-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.12-.14.17-.23.25-.39.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.5-.41-.43-.56-.44-.15-.01-.31-.01-.47-.01-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.39 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.3z" />
           </svg>

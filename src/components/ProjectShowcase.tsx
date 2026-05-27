@@ -7,8 +7,7 @@ import { useState } from "react";
 import { SHOWCASE_PROJECTS } from "../data/projects";
 import { ShowcaseProject } from "../types";
 import { MapPin, Zap, Leaf, Scale, CheckCircle2, AlertTriangle, ShieldCheck } from "lucide-react";
-
-const droneImage = "/src/assets/images/hero_biogas_infrastructure_1779788974859.png";
+import droneImage from "../assets/images/hero_biogas_infrastructure_1779788974859.png";
 
 export default function ProjectShowcase() {
   const [activeFilter, setActiveFilter] = useState<string>("ALL");

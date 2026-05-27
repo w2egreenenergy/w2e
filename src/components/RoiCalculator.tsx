@@ -255,7 +255,7 @@ export default function RoiCalculator() {
           <div className="lg:col-span-6 p-6 sm:p-10 bg-gradient-to-br from-[#121817] via-[#121817]/40 to-[#0B0F0C]/20 border-t lg:border-t-0 lg:border-l border-white/5 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 pb-4 border-b border-white/5 mb-8">
-                <Sparkles className="w-5 h-5 text-[#3DDC84] animate-pulse" />
+                <Sparkles className="w-5 h-5 text-[#3DDC84]" />
                 <h3 className="font-heading font-extrabold text-base text-white tracking-widest uppercase">
                   ESTIMATED FEASIBILITY REPORT
                 </h3>
@@ -266,7 +266,7 @@ export default function RoiCalculator() {
                 
                 {/* 1: CNG Prod */}
                 <div className="bg-[#0B0F0C]/80 border border-[#00C853]/15 p-4.5 rounded-2xl shadow-inner hover:border-[#3DDC84]/30 transition-all duration-300">
-                  <Flame className="w-4 h-4 text-[#3DDC84] mb-1.5 animate-pulse" />
+                  <Flame className="w-4 h-4 text-[#3DDC84] mb-1.5" />
                   <span className="text-[10px] font-mono text-gray-400 block uppercase tracking-wider">Bio-CNG Yield</span>
                   <span className="block font-mono text-2xl font-black text-white">{outputs.bioCngProd.toLocaleString()}</span>
                   <span className="text-[9px] font-mono text-gray-500">KG / RUNNING DAY</span>
@@ -316,7 +316,7 @@ export default function RoiCalculator() {
               <div>
                 <span className="block text-[10px] font-mono text-gray-400 uppercase tracking-widest mb-1 flex items-center gap-1">
                   PAYBACK PERIOD
-                  <Info className="w-3.5 h-3.5 text-[#3DDC84] animate-pulse cursor-help" title="Calculated using standardized EBITDA averages." />
+                  <Info className="w-3.5 h-3.5 text-[#3DDC84] cursor-help" title="Calculated using standardized EBITDA averages." />
                 </span>
                 <span className="block text-3xl font-mono font-black text-[#3DDC84] drop-shadow-[0_0_12px_rgba(61,220,132,0.3)]">
                   {outputs.roiTimelineYears} Years
