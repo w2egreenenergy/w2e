@@ -188,7 +188,7 @@ export default function KnowledgeHub() {
                   </p>
                   <div className="bg-w2e-green/5 border border-w2e-lime/10 p-5 rounded-xl font-mono text-xs text-w2e-lime-400 my-6">
                     <div className="flex items-center gap-2 mb-2">
-                      <Sparkles className="w-4 h-4 text-w2e-lime animate-pulse" />
+                      <Sparkles className="w-4 h-4 text-w2e-lime" />
                       <span className="font-bold">ENGINEERING COMPLIANCE NOTATION</span>
                     </div>
                     Under SATAT Scheme directives, refined biomethane offtake pricing structures are indexed against long-term natural gas rates. This establishes highly liquid corporate cashflows that pay down initial biorefinery CAPEX outlays inside of 4 to 6 operational calendar years.

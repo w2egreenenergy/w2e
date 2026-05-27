@@ -166,7 +166,7 @@ export default function ProcessFlow() {
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2 text-w2e-lime mb-2">
-                <Sparkles className="w-4 h-4 animate-spin text-w2e-lime" />
+                <Sparkles className="w-4 h-4 text-w2e-lime" />
                 <span className="text-xs font-mono uppercase tracking-widest font-bold">REACTION CHAMBER ONLINE</span>
               </div>
               <span className="text-4xl font-heading font-extrabold text-white">
@@ -185,7 +185,7 @@ export default function ProcessFlow() {
               </div>
               <div className="flex justify-between items-center border-b border-white/5 pb-2">
                 <span className="text-gray-500">OPERATIONAL STATE:</span>
-                <span className="text-emerald-400 font-bold animate-pulse">OPTIMIZED (CSTR-1)</span>
+                <span className="text-emerald-400 font-bold">OPTIMIZED (CSTR-1)</span>
               </div>
               <div>
                 <span className="block text-gray-500 mb-1 uppercase text-[9px] tracking-wide">Chemical Stoichiometric Formula:</span>

@@ -5,8 +5,7 @@
 
 import { useState, useEffect } from "react";
 import { ShieldCheck, Cpu, RefreshCw, Layers, BrainCircuit, Workflow } from "lucide-react";
-
-const purificationImage = "/src/assets/images/purification_automation_tech_1779788996711.png";
+import purificationImage from "../assets/images/purification_automation_tech_1779788996711.png";
 
 export default function Technology() {
   // Mini simulated live dashboard states
@@ -64,7 +63,7 @@ export default function Technology() {
         {/* Header Column structure */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <span className="text-xs font-mono text-w2e-lime tracking-widest uppercase block animate-pulse">
+            <span className="text-xs font-mono text-w2e-lime tracking-widest uppercase block">
               SYSTEM ENGINEERING CONSOLE
             </span>
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
@@ -99,7 +98,7 @@ export default function Technology() {
                 </span>
               </div>
               <div className="flex items-center gap-2 text-[10px] font-mono text-[#8CC63F]">
-                <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                <RefreshCw className="w-3.5 h-3.5" />
                 TELEMETRY REFRESH LIVE
               </div>
             </div>

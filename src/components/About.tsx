@@ -60,7 +60,7 @@ export default function About() {
 
             <div className="pt-4 border-t border-white/5 space-y-4">
               <div className="flex items-start gap-3 bg-[#121817]/50 border border-[#00C853]/15 p-4.5 rounded-xl hover:border-[#3DDC84]/35 transition-colors duration-300 shadow-[0_0_15px_rgba(0,200,83,0.02)]">
-                <ShieldAlert className="w-5 h-5 text-[#3DDC84] shrink-0 mt-0.5 animate-pulse" />
+                <ShieldAlert className="w-5 h-5 text-[#3DDC84] shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-semibold text-white">Our Master Carbon Mandate:</h4>
                   <p className="text-xs text-gray-400 mt-1 leading-relaxed">

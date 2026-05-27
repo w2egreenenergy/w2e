@@ -77,18 +77,12 @@
   transform: translateY(-4px);
 }
 
-/* Kinetic Grid Background Slider */
+/* Kinetic Grid Background - Modern Clean Technical Layout */
 .kinetic-grid {
   background-image: 
     linear-gradient(rgba(0, 200, 83, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 200, 83, 0.015) 1px, transparent 1px);
   background-size: 50px 50px;
-  animation: grid-slide 40s linear infinite;
-}
-
-@keyframes grid-slide {
-  from { background-position: 0 0; }
-  to { background-position: 100px 100px; }
 }
 
 /* Hide standard scrollbars but allow scrolling */
